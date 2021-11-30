@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>活动通知公共页面</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/static/css/activityInform.css}"/>
+    <link rel="stylesheet" th:href="@{/static/css/buildingDesign.css}" type="text/css"/>
+    <script type="text/javascript" th:src="@{/static/js/jquery-1.7.2.js}"></script>
+</head>
+<body>
+<div id="entirety">
+    <div id="act_long">
+        <div class="logo"><img th:src="@{/static/img/schoolBadge.jpg}"/></div>
+        <div class="logo-name">贵州建设职业技术学院活动中心</div>
+    </div>
+    <div id="Man_head_navigation">
+        <ul>
+            <li><a th:href="@{/}">首页</a></li>
+            <li><a href="">学院简介</a></li>
+            <li><a href="">学院活动</a></li>
+            <li><a href="">学院社团</a></li>
+            <li><a href="">学生会</a></li>
+            <li><a href="javaScript:void(0);">后台登录</a></li>
+        </ul>
+    </div>
+    <div id="activityDatas">
+        <div class="activityName"><span th:text="|关于开展${activity.activeName}活动通知|"></span></div>
+        <div class="reDatas">
+            <div class="centes">
+                <div class="datas">
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;活动简介</h1><br/>
+                    <p th:text="${activity.activityBrief}"></p>
+
+                </div>
+                <div class="datas1">
+                    <h1 th:text="${activity.activeName}"></h1>
+                </div>
+            </div>
+            <div class="enddatas">
+                <div class="inform">
+                    活动公告
+                    <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                </div>
+                <ul>
+                    <li><a href="javaScript:void(0)">网页设计赛事通知</a><span>2021-11-20</span></li>
+                    <li><a href="javaScript:void(0)">电商赛事通知</a><span>2021-11-20</span></li>
+                    <li><a href="javaScript:void(0)">建筑工程学院推荐赛项:混凝土通知</a><span>2021-11-20</span></li>
+                    <li><a href="javaScript:void(0)">CAD绘图比赛知通知</a><span>2021-11-20</span></li>
+                    <li><a href="javaScript:void(0)">建筑工程识图通知</a><span>2021-11-20</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rgDatas">
+            <div class="inform">
+                &nbsp;&nbsp;活动项目
+                <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+            </div>
+            <ul>
+                <li><a href="javaScript:void(0)">网页设计</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">建筑工程学院推荐赛项:混凝土</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">业财一体化</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">信号控制</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">直播电商</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">电气控制技术</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">工程测量</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">机械CAD</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">CAD绘图比赛</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">建筑智能化系统安装与调试</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">建筑工程识图</a><span>2021-11-20</span></li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="activityDatas" >
+        <div class="resdata">
+            <div class="ups">
+                <div class="updata">
+                    <div class="inform">
+                        往届精彩瞬间
+                        <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                    </div>
+                    <ul>
+                        <li><a href="javaScript:void(0)">19级社会体育班***破100米记录</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">19级社会体育班***破1500米记录</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">20级社会体育班***破跳高记录</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">18级社会体育班***破铅球记录</a><span>2021-11-20</span></li>
+                    </ul>
+                </div>
+                <div class="updata1">
+                    <div class="updata105"><a href="">
+                        <img id="exercise" src="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise1.jpg"></a>
+                    </div>
+                    <div class="updata1051">
+                        <a href=""><img id="clubs" src="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs6.jpg"></a>
+                        <script type="text/javascript">
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="ends">
+                <div class="endsre">
+                    <div class="inform">
+                        往届夺冠排行
+                        <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                    </div>
+                    <ul>
+                        <li><a href="javaScript:void(0)">信息管理分院</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">建筑设计分院</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">建筑设备分院</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">建筑工程分院</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">19级社会体育一班</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">19级市政工程一班</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">19级计算机应用一班</a><span>2021-11-20</span></li>
+                        <li><a href="javaScript:void(0)">20级社会体育一班</a><span>2021-11-20</span></li>
+                    </ul>
+                </div>
+                <div class="endsrg">
+                    <div class="endsrgup">
+                        <span>精彩瞬间回放</span>
+                    </div>
+                    <div class="endsrgend">
+                        <a href=""><img id="imgVon" src="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity6.jpg"></a>
+                        <script type="text/javascript">
+                                let curIndex=0;
+                                //时间间隔 单位毫秒
+                                let timeInterval=2000;
+                                let arr = new Array();
+                                arr[0]="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity1.jpg";
+                                arr[1]="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity2.jpg";
+                                arr[2]="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity3.jpg";
+                                arr[3]="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity4.jpg";
+                                arr[4]="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity5.jpg";
+                                arr[5]="http://139.224.189.89:8080/schoolAssociation/static/img/activity/activity6.jpg";
+
+
+                                let arr1 = new Array();
+                                arr1[0]="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise1.jpg";
+                                arr1[1]="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise2.jpg";
+                                arr1[2]="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise3.jpg";
+                                arr1[3]="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise4.jpg";
+                                arr1[4]="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise5.jpg";
+                                arr1[5]="http://139.224.189.89:8080/schoolAssociation/static/img/exercise/exercise6.jpg";
+
+
+                                let arr2 = new Array();
+                                arr2[0]="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs1.jpg";
+                                arr2[1]="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs2.jpg";
+                                arr2[2]="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs3.jpg";
+                                arr2[3]="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs4.jpg";
+                                arr2[4]="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs5.jpg";
+                                arr2[5]="http://139.224.189.89:8080/schoolAssociation/static/img/clubs/clubs6.jpg";
+
+                                setInterval(changeImg,timeInterval);
+                                function changeImg() {
+                                    if (curIndex == arr.length-1){
+                                        curIndex=0;
+                                    } else {
+                                        curIndex+=1;
+                                    }
+                                    document.getElementById("exercise").src = arr1[curIndex];
+                                    document.getElementById("imgVon").src = arr[curIndex];
+                                    document.getElementById("clubs").src = arr2[curIndex];
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rgsdata">
+            <div class="inform">
+                &nbsp;&nbsp;往届项目热度排行
+                <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+            </div>
+            <ul>
+                <li><a href="javaScript:void(0)">网页设计</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">商品展示技术</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">花艺(插花)</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">精细木工</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">直播电商</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">业财一体化</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">综合法律知识竞赛</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">建筑智能化系统安装与调试</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">工程测量</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">电子产品装调</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">CAD绘图比赛</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">机械CAD</a><span>2021-11-20</span></li>
+                <li><a href="javaScript:void(0)">PLC编程技术赛项</a><span>2021-11-20</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 20px; text-align: center;width: 100%;height: 50px;background-color: #b9c0c2;">
+    <p style=" padding-top: 18px;color: #0aa6d6;font-family: 华文隶书;font-size: 20px;text-align: center;">贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>活动申请页</title>
+    <link rel="stylesheet" th:href="@{/static/css/applications.css}" type="text/css">
+</head>
+<body>
+    <div id="applications">
+        <div id="forms">
+            <form action="" method="post">
+                <a id="returnButtons" th:href="@{/}"></a>
+                <table border="1px" cellspacing="0" cellpadding="0" width="100%" height="600px" align="center">
+                    <tr>
+                        <th colspan="10" height="50px">活动申请</th>
+                    </tr>
+                    <tr align="center">
+                        <td width="13%">所属分院：</td>
+                        <td width="15%"><input type="text" id="userCourts" placeholder="输入分院名"></td>
+                        <td width="13%">所在专业：</td>
+                        <td width="15%"><input type="text" id="userMajor" placeholder="输入专业名"></td>
+                        <td width="13%">班级：</td>
+                        <td width="15%"><input type="text" id="userGrade" placeholder="输入班级名"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="13%">负责人姓名：</td>
+                        <td width="15%"><input type="text" id="userPrincipal" placeholder="输入负责人姓名"></td>
+                        <td width="13%">学号：</td>
+                        <td width="15%"><input type="text" id="userNumber" placeholder="输入学号"></td>
+                        <td width="13%">身份证号：</td>
+                        <td width="15"><input type="text" id="userIdcard" placeholder="输入18位身份证号"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="13%">类型：</td>
+                        <td width="15%">
+                            <select id="activityType" style="background-color: #bfd5ea;border: none;resize: none;cursor: pointer;">
+                                <option id="" value="学术类" selected>学术类</option>
+                                <option id="" value="创业类">创业类</option>
+                                <option id="" value="体育类">体育类</option>
+                                <option id="" value="美术类">美术类</option>
+                                <option id="" value="科技类">科技类</option>
+                                <option id="" value="其他">其他</option>
+                            </select>
+                        </td>
+                        <td width="13%" rowspan="2">所需器材：</td>
+                        <td width="15%" rowspan="2" colspan="3"><input type="text" placeholder="所需器材"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="13%">其他类型：</td>
+                        <td width="15%"><input type="text" id="" placeholder="其他类型名称填写"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="6" height="50px"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="6" align="center">申请初步方案</th>
+                    </tr>
+                    <tr align="center">
+                        <td width="13%">活动名称：</td>
+                        <td colspan="5"><input type="text" id="activityName" placeholder="活动名称"></td>
+                    </tr>
+                    <tr align="center">
+                        <td>主题：</td>
+                        <td colspan="5"><input type="text" id="activityTheme" placeholder="活动主题"></td>
+                    </tr>
+                    <tr height="180px" align="center">
+                        <td>活动方案</td>
+                        <td colspan="5"><textarea style="background-color: #bfd5ea;border: none;resize: none;cursor: pointer;" cols="130" rows="20" id="proofAcyivity" placeholder="请填写活动方案"></textarea></td>
+                    </tr>
+                    <tr height="40px">
+                        <td colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="6" align="center">主要成员</th>
+                    </tr>
+                    <tr align="center">
+                        <td width="10%">成员1：</td>
+                        <td width="13%"><input type="text" id="member1Name" placeholder="成员姓名"></td>
+                        <td width="13%"><input type="text" id="member1Grade" placeholder="班级"></td>
+                        <td width="13%"><input type="text" id="member1Number" placeholder="学号"></td>
+                        <td width="13%"><input type="text" id="member1Type" placeholder="负责方向"></td>
+                        <td width="13%"><input type="text" id="member1Position" placeholder="活动职位"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="10%">成员2：</td>
+                        <td width="13%"><input type="text" id="member2Name" placeholder="成员姓名"></td>
+                        <td width="13%"><input type="text" id="member2Grade" placeholder="班级"></td>
+                        <td width="13%"><input type="text" id="member2Number" placeholder="学号"></td>
+                        <td width="13%"><input type="text" id="member2Type" placeholder="负责方向"></td>
+                        <td width="13%"><input type="text" id="member2Position" placeholder="活动职位"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="10%">成员3：</td>
+                        <td width="13%"><input type="text" id="member3Name" placeholder="成员姓名"></td>
+                        <td width="13%"><input type="text" id="member3Grade" placeholder="班级"></td>
+                        <td width="13%"><input type="text" id="member3Number" placeholder="学号"></td>
+                        <td width="13%"><input type="text" id="member3Type" placeholder="负责方向"></td>
+                        <td width="13%"><input type="text" id="member3Position" placeholder="活动职位"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="10%">成员4：</td>
+                        <td width="13%"><input type="text" id="member4Name" placeholder="成员姓名"></td>
+                        <td width="13%"><input type="text" id="member4Grade" placeholder="班级"></td>
+                        <td width="13%"><input type="text" id="member4Number" placeholder="学号"></td>
+                        <td width="13%"><input type="text" id="member4Type" placeholder="负责方向"></td>
+                        <td width="13%"><input type="text" id="member4Position" placeholder="活动职位"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="10%">成员5：</td>
+                        <td width="13%"><input type="text" id="member5Name" placeholder="成员姓名"></td>
+                        <td width="13%"><input type="text" id="member5Grade" placeholder="班级"></td>
+                        <td width="13%"><input type="text" id="member5Number" placeholder="学号"></td>
+                        <td width="13%"><input type="text" id="member5Type" placeholder="负责方向"></td>
+                        <td width="13%"><input type="text" id="member5Position" placeholder="活动职位"></td>
+                    </tr>
+                    <tr align="center">
+                        <td width="50%" colspan="3">
+                            <input style=" width: 100%;
+                                            background-color: #fdefe6;
+                                            border-top-left-radius:50px;
+                                            border-top-right-radius:50px;
+                                            border-bottom-right-radius:50px;
+                                            border-bottom-left-radius:50px;" type="submit" value="提交申请"/>
+                        </td>
+                        <td width="50%" colspan="3">
+                            <input id="returnButton" @click="returnButton" style=" width: 100%;
+                                            background-color: #fdefe6;
+                                            border-top-left-radius:50px;
+                                            border-top-right-radius:50px;
+                                            border-bottom-right-radius:50px;
+                                            border-bottom-left-radius:50px;"
+                                    type="button" value="清空返回">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div style="margin-top: 20px; text-align: center;width: 100%;height: 50px;background-color: #b9c0c2;">
+        <p style=" padding-top: 18px;color: #0aa6d6;font-family: 华文隶书;font-size: 20px;text-align: center;">贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+    </div>
+</body>
+<script th:src="@{/static/js/vue.js}" type="text/javascript"></script>
+<script type="text/javascript">
+
+    let  vue = new Vue({
+        el:'#returnButton',
+        methods:{
+            returnButton: function(event){
+
+                let confirms = confirm("是否清空信息返回首页");
+
+                if(confirms){
+
+                    let buttons = document.getElementById("returnButtons");
+
+                    let hrefs = buttons.href;
+
+                    location.href=hrefs;
+                }
+
+            }
+        }
+    })
+</script>
+</html>

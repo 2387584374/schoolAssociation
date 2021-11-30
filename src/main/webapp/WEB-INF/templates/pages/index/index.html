@@ -1,0 +1,276 @@
+    <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>贵州建设职业技术学院活动中心首页</title>
+    <link rel="stylesheet" th:href="@{/static/css/index.css}" type="text/css"/>
+    <script th:src="@{/static/js/jquery-1.8.3.min.js}"></script>
+</head>
+<body>
+    <div class="navigationFixed">
+        <div id="hearder2" class="clearfix">
+            <div class="logo">
+              <img th:src="@{/static/img/schoolBadge.jpg}">
+            </div>
+            <div class="logo-name">贵州建设职业技术学院活动中心</div>
+            <div class="userCentre" id="menus">
+                <input type="hidden" id="name" th:value="${username}"/>
+                <div class="datas"><h1 th:text="|欢迎${username != null ? username : ''}同学登录|"></h1></div>
+                <div class="datas"><br/><br/><a th:href="@{'/personalCenter/personalIndex/'+${username}}">个人中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javaScript:void(0)">安全退出</a></div>
+            </div>
+            <script type="text/javascript">
+                let menus = document.getElementById("menus");
+                menus.style.visibility='hidden'
+                let  usernames = document.getElementById("name").value;
+                if (usernames != undefined && usernames != null && usernames != ''){
+                     menus.style.visibility='';
+                }
+            </script>
+        </div>
+        <div id="menu-box" class="clearfix">
+            <ul>
+                <li><a href="javaScript:void(0)">首页</a></li>
+                <li><a th:href="@{/activity/activity}">学院活动</a></li>
+                <li><a th:href="@{/clubIntroduce/clubIntroduce}">社团中心</a></li>
+                <li><a th:href="@{/applications/applications}">活动申请</a></li>
+                <li><a th:href="@{/SortingTheUrl/infoManagement}">信息管理分院</a></li>
+                <li><a th:href="@{/SortingTheUrl/architecturalEngineering}">建筑工程分院</a></li>
+                <li><a th:href="@{/SortingTheUrl/buildingDesign}">建筑设计分院</a></li>
+                <li><a th:href="@{/SortingTheUrl/architecturalEquipment}">建筑设备分院</a></li>
+                <li><a th:href="@{/register/userLogin}">后台登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="slider-box">
+        <video id="video" style="width:100%; height:100%; object-fit: fill;" autoplay="autoplay" controls="controls" muted>
+            <source th:src="@{/static/MP4/video.mp4}" type="video/mp4"/>
+        </video>
+    </div>
+    <div id="index1-div1" class="clearfix">
+        <div class="index1-left675">
+            <div class="title-box">学院简介
+                <a href="" class="title-more">
+                    <img th:src="@{/static/img/more.gif}">
+                </a>
+            </div>
+            <p><img th:src="@{/static/img/schoolBadge.jpg}" align="left">
+                贵州建设职业技术学院（GuiZhou Polytechnic Of Construction）是经贵州省人民政府批准，教育部备案的全日制公办普通高等专科学校。
+                学院创建于1979年，历经贵州省建筑材料工业学校、贵州省建设学校等时期，2014年定名为贵州建设职业技术学院。
+                据2021年1月学校官网显示，学院占地511亩；设有6个教学单位，开设六大专业群共44个专业；有教职工近600人，在校学生13000余人.....
+                <a href="">查看更多...</a></p>
+        </div>
+        <div class="index1-right300">
+            <div class="title-box">通知公告
+                <a href="#" class="title-more">
+                    <img th:src="@{/static/img/more.gif}">
+                </a>
+            </div>
+              <ul>
+                  <li th:each="schoolInfos:${schoolInfos}"><a th:href="@{/}" th:text="${schoolInfos.infoName}"></a><span th:text="${schoolInfos.infoItem}" ></span></li>
+              </ul>
+        </div>
+    </div>
+    <div id="index1-div2" class="clearfix">
+        <div class="index1-left675">
+            <div class="index1-li-box">
+            <div class="index1-left330">
+                <div class="title-box">活动动态
+                    <a href="" class="title-more">
+                        <img th:src="@{/static/img/more.gif}">
+                    </a>
+                </div>
+                <img th:src="@{/static/img/cati4.png}" style="width:330px; height:140px; margin:5px 0;">
+                <ul>
+                    <li th:each="inform:${informs}"><a th:text="${inform.informName}" th:href="@{/commonInform/{urls}(urls=${inform.activityUrl})}"></a><span th:text="${inform.informTime}" ></span></li>
+                </ul>
+            </div>
+            <div class="index1-right330">
+                <div class="title-box">社团动态
+                    <a href="" class="title-more">
+                        <img th:src="@{/static/img/more.gif}"></a></div>
+                <img th:src="@{/static/img/club4.jpg}" style="width:330px; height:140px; margin:5px 0;">
+                <ul>
+                    <li th:each="clubInforms:${clubInforms}"><a th:href="@{/}" th:text="${clubInforms.activeName}"></a><span th:text="${clubInforms.activeTime}" ></span></li>
+                </ul>
+            </div>
+            </div>
+            <div class="index1-pic-gun">
+                <div class="title-box">活动资源
+                    <a href="" class="title-more">
+                        <img th:src="@{/static/img/more.gif}"></a>
+                </div>
+                <div class="scrollleft clearfix">
+                    <ul>
+                        <li>
+                            <a href=""><img th:src="@{/static/img/activity/activity5.jpg}"/></a>
+                            <span>十佳歌手</span>
+                        </li>
+                        <li>
+                            <a href=""><img  th:src="@{/static/img/jnds.jpg}"/></a>
+                            <span>技能大赛</span>
+                        </li>
+                        <li>
+                            <a href=""><img  th:src="@{/static/img/exercise/exercise2.jpg}"/></a>
+                            <span>校运会</span>
+                        </li>
+                        <li>
+                            <a href=""><img  th:src="@{/static/img/club3.jpg}"/></a>
+                            <span>简历大赛</span>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+
+                        $(".scrollleft").imgscroll({
+                            speed: 40,    //图片滚动速度
+                            amount: 0,    //图片滚动过渡时间
+                            width: 1,     //图片滚动步数
+                            dir: "left"   // "left" 或 "up" 向左或向上滚动
+                        });
+
+                    });
+                </script>
+
+            </div>
+        </div>
+        <div class="index1-right300">
+            <div class="index1-login-box" id="loginBox">
+              <div class="title-box" id="var">学生登录</div>
+              <form id="form1" name="form1" method="post" th:action="@{/login}">
+                <input type="text" name="username"  id="username" placeholder="用户名" class="index1-uname">
+                <input type="password" name="password" id="password" placeholder="密码" class="index1-upass">
+                <div class="index1-t-link">
+                    <input type="checkbox" name="checkbox" id="checkbox" class="index1-chek">记住密码
+                    <a th:href="@{/register/uppassword}">忘记密码?</a>
+                </div>
+                <input type="submit" name="submit" id="submit" value="登录" class="index1-input-login">
+                  <a id="registerUrl" th:href="@{/register/register}"></a>
+                <input type="button" name="button" id="button" value="注册" class="index1-input-but" @click="registerButton"/>
+              </form>
+            </div>
+            <div class="index1-list-menu">
+                <div class="title-box">热门活动</div>
+                <ul>
+                    <li th:each="active:${actives}"><a th:href="@{/}" th:text="${active.activeName}"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 20px; text-align: center;width: 100%;height: 50px;background-color: #b9c0c2;">
+        <p style=" padding-top: 18px;color: #0aa6d6;font-family: 华文隶书;font-size: 20px;text-align: center;">贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+    </div>
+    </body>
+    <script type="text/javascript" th:inline="javascript">
+        /*<![CDATA[*/
+
+        let errors = [[${error}]];
+
+        let enters = [[${enter}]];
+
+        const  loginBox = document.getElementById("form1");
+
+        const loginBox1 = document.getElementById("title-box");
+
+        const loginBoxVar = document.getElementById("var");
+
+        let  username = document.getElementById("name").value;
+
+        if( username != undefined && username != null && username != ''){
+            loginBoxVar.style.visibility='hidden';
+            loginBox.style.visibility='hidden';
+            loginBox1.style.visibility='hidden';
+        }
+
+       if(errors == "false"){
+           alert("账号密码错误");
+       }
+
+       if(enters == "false"){
+           alert("同学尚未登录、暂不可报名。如需报名、下角登录。");
+       }
+
+        let affects = [[${affect}]];
+
+       if(affects == "ture"){
+            alert("报名成功了 去看看其他精彩活动吧");
+           affects='';
+       }
+       if(affects == "false"){
+           alert("报名失败 请稍后重试");
+           affects='';
+       }
+       if(affects == "success"){
+           alert("你已经报名过了，快去看看其他活动吧");
+           affects='';
+       }
+
+        /*]]>*/
+    </script>
+    <script th:src="@{/static/js/vue.js}" type="text/javascript"></script>
+    <script type="text/javascript">
+        let  vue = new Vue({
+            el:'#button',
+            methods : {
+                registerButton:function (event) {
+
+                    let urls = document.getElementById("registerUrl").href;
+
+                    location.href=urls;
+                }
+            }
+        });
+    </script>
+<script type="text/javascript">
+    $.fn.imgscroll = function(o){
+        var defaults = {
+            speed: 40,
+            amount: 0,
+            width: 1,
+            dir: "left"
+        };
+        o = $.extend(defaults, o);
+
+        return this.each(function(){
+            var _li = $("li", this);
+            _li.parent().parent().css({overflow: "hidden", position: "relative"}); //div
+            _li.parent().css({margin: "0", padding: "0", overflow: "hidden", position: "relative", "list-style": "none"}); //ul
+            _li.css({position: "relative", overflow: "hidden"}); //li
+            if(o.dir == "left") _li.css({float: "left"});
+
+            //初始大小
+            var _li_size = 0;
+            for(var i=0; i<_li.size(); i++)
+                _li_size += o.dir == "left" ? _li.eq(i).outerWidth(true) : _li.eq(i).outerHeight(true);
+
+            //循环所需要的元素
+            if(o.dir == "left") _li.parent().css({width: (_li_size*3)+"px"});
+            _li.parent().empty().append(_li.clone()).append(_li.clone()).append(_li.clone());
+            _li = $("li", this);
+
+            //滚动
+            var _li_scroll = 0;
+            function goto(){
+                _li_scroll += o.width;
+                if(_li_scroll > _li_size)
+                {
+                    _li_scroll = 0;
+                    _li.parent().css(o.dir == "left" ? { left : -_li_scroll } : { top : -_li_scroll });
+                    _li_scroll += o.width;
+                }
+                _li.parent().animate(o.dir == "left" ? { left : -_li_scroll } : { top : -_li_scroll }, o.amount);
+            }
+
+            //开始
+            var move = setInterval(function(){ goto(); }, o.speed);
+            _li.parent().hover(function(){
+                clearInterval(move);
+            },function(){
+                clearInterval(move);
+                move = setInterval(function(){ goto(); }, o.speed);
+            });
+        });
+    };
+</script>
+</html>
+

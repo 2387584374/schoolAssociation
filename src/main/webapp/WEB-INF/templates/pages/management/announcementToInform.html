@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>后台管理</title>
+  <link rel="stylesheet" th:href="@{/static/css/index.css}" type="text/css"/>
+  <link th:href="@{/static/css/infoManagement.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{/static/css/management.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div style="position: fixed;width: 100%;height: 130px; top: 0">
+  <div id="hearder2" class="clearfix" >
+    <div class="logo">
+      <img th:src="@{/static/img/schoolBadge.jpg}">
+    </div>
+    <div class="logo-name">后台管理</div>
+  </div>
+  <div id="menu-box" class="clearfix">
+    <ul>
+      <li><a th:href="@{/}">首页</a></li>
+      <li><a th:href="@{/activity/activity}">学院活动</a></li>
+      <li><a th:href="@{/clubIntroduce/clubIntroduce}">社团中心</a></li>
+      <li><a th:href="@{/applications/applications}">活动申请</a></li>
+      <li><a th:href="@{/SortingTheUrl/infoManagement}">信息管理分院</a></li>
+      <li><a th:href="@{/SortingTheUrl/architecturalEngineering}">建筑工程分院</a></li>
+      <li><a th:href="@{/SortingTheUrl/buildingDesign}">建筑设计分院</a></li>
+      <li><a th:href="@{/SortingTheUrl/architecturalEquipment}">建筑设备分院</a></li>
+    </ul>
+  </div>
+</div>
+<div id="Man_img" style="margin-top: 130px"><img th:src="@{/static/img/personHome.jpg}"/></div>
+<div id="infors">
+  <div class="navigation">
+    <ul>
+      <li><a th:href="@{/management/managementIndex}">活动管理</a></li>
+      <li><a th:href="@{/management/managementClub}">社团管理</a></li>
+      <li><a th:href="@{/management/activityReleased}">发布活动</a></li>
+      <li><a th:href="@{/management/announcement}">公告发布</a></li>
+      <li><a th:href="@{/management/noticeIssued}">通知发布</a></li>
+      <li><a th:href="@{/management/announcementToInform}">公告通知操作</a></li>
+      <li><a th:href="@{/management/reviewActivities}">活动申请审核</a></li>
+    </ul>
+  </div>
+  <div class="management">
+    <div class="managementHeads"><h1>公告通知操作</h1></div>
+    <div class="managementCenter">
+      <table border="1px" cellspacing="0" cellpadding="0" width="100%" height="200px" align="center">
+        <tr style="height: 40px;font-size: 20px">
+          <th>名称</th>
+          <th>主题</th>
+          <th>发布时间</th>
+          <th>当前状态</th>
+          <th>访问人数</th>
+          <th>详细</th>
+          <th colspan="2">权限操作</th>
+        </tr>
+        <tr align="center" style="height: 40px">
+          <td><h1>名称</h1></td>
+          <td><h1>主题</h1></td>
+          <td><h1>发布时间</h1></td>
+          <td><h1>当前状态</h1></td>
+          <td><h1>访问人数</h1></td>
+          <td><a href="#">详细</a></td>
+          <td><a href="#">修改</a></td>
+          <td><a href="#">删除</a></td>
+        </tr>
+        <tr align="center" style="height: 40px">
+          <td><h1>名称</h1></td>
+          <td><h1>主题</h1></td>
+          <td><h1>发布时间</h1></td>
+          <td><h1>当前状态</h1></td>
+          <td><h1>访问人数</h1></td>
+          <td><a href="#">详细</a></td>
+          <td><a href="#">修改</a></td>
+          <td><a href="#">删除</a></td>
+        </tr>
+        <tr align="center" style="height: 40px">
+          <td><h1>名称</h1></td>
+          <td><h1>主题</h1></td>
+          <td><h1>发布时间</h1></td>
+          <td><h1>当前状态</h1></td>
+          <td><h1>访问人数</h1></td>
+          <td><a href="#">详细</a></td>
+          <td><a href="#">修改</a></td>
+          <td><a href="#">删除</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="managementPaging">
+      <div class="ulLis">
+        <ul>
+          <li><a href="#">首页</a></li>
+          <li><a href="#">上一页</a></li>
+          <li><h1>当前【1】页</h1></li>
+          <li><a href="#">下一页</a></li>
+          <li><a href="#">最后一页</a></li>
+          <li><h1>共1页</h1></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top: 20px; text-align: center;width: 100%;height: 50px;background-color: #b9c0c2;">
+  <p style=" padding-top: 18px;color: #0aa6d6;font-family: 华文隶书;font-size: 20px;text-align: center;">贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+</div>
+</body>
+</html>

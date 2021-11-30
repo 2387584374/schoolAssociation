@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ccf0ff;
+    margin: 0 auto;
+}
+
+#activityforms{
+    margin: 80px auto;
+    width: 80%;
+    height: 100%;
+}
+#activityforms .forms{
+    margin: 0 auto;
+    width: 500px;
+    height: 460px;
+}
+
+.forms input{
+    width: 82%;
+    height:10%;
+    padding: 5px 0 5px 10px;
+    background: #fff;
+    line-height: 20px;
+    outline: 0;
+    font-family: "微软雅黑";
+    float: left;
+    border:0;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-bottom: 0;
+    background: 0 0;
+}
+
+.forms button{
+    width: 49.5%;
+    height: 40px;
+    color: #d9b4b4;
+    font-size: 15px;
+    background-image: linear-gradient(to top, #fff7fd 0%, #b7baec 100%);
+}

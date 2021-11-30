@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ecf4fc;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#act{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+#act_hd{
+    width: 100%;
+    height: 9%;
+    border-bottom-right-radius:30px;
+    border-bottom-left-radius:30px;
+    background-color: #e3eefa;
+}
+
+#act_hd span{
+    position: absolute;
+    top: 5%;
+    left: 33%;
+    font-family: 华文行楷;
+    font-size: 40px;
+    color: #0c0101;
+}
+#act_hd img{
+    margin-left: 15%;
+    width: 10%;
+    height: 100%;
+}
+#cat_info {
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+    background-color: #ffebf8;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+li a{
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #43dff5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#act_info ul,li{
+    margin: 2% 5%;
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+}
+
+#act_new{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#act_new #re{
+    width: 35%;
+    height: 400px;
+}
+
+#re #log{
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 105px;
+    height: 90px;
+    background-color: #0782A8;
+}
+#re #log img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+#re #activeName{
+    width: 50%;
+    height: 50px;
+
+}
+#activeName h1{
+    padding-top: 5px;
+    padding-left: 30px;
+    font-family: "华文行楷";
+    color: #0AA6D6;
+}
+
+
+#act_new #tagline{
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+
+
+}
+#tagline h2,h4{
+    padding-top: 25px;
+    padding-left: 15px;
+    font-family: "华文行楷";
+    color: #35A0FF;
+}
+
+
+#act_new #endbutton{
+    margin-top: 53px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+
+#endbutton button{
+    width: 30%;
+    border-radius: 10px;
+    border: 0;
+    color: #d9b4b4;
+    font-size: 15px;
+    background-image: linear-gradient(to top, #fff7fd 0%, #b7baec 100%);
+}
+
+#act_new #rg{
+    width: 62%;
+    height: 400px;
+
+}
+
+#rg img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+
+#act_recommend{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    height: 160px;
+}
+
+#act_recommend img:hover {
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+#act_recommend .date{
+    width: 23%;
+    height: 100%;
+    background-color: #fdeaf2;
+}
+
+.date img{
+    width: 100%;
+    height:100%;
+    object-fit: fill;
+}
+
+#act_MoreActivities{
+    width: 100%;
+    height: 2%;
+    margin-top: 2%;
+    /*background-color: #eadee1;*/
+}
+
+#act_MoreActivities span{
+    font-size: 20px;
+    font-family: 华文行楷;
+}
+
+#act_MoreActivities a{
+    text-decoration: none;
+    margin-top: 2%;
+    margin-left: 86%;
+}
+
+#act_MoreActivitiesDate{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    height: 190px;
+}
+
+#act_MoreActivitiesDate img:hover {
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+#act_MoreActivitiesDate .Mdata{
+    float: left;
+    width: 32%;
+    height: 100%;
+    background-color: #fdeaf2;
+}
+
+.Mdata img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+
+}
+#act_end{
+    width: 100%;
+    height: 20%;
+    margin-top: 2%;
+}
+
+#act_end span{
+    width: 100%;
+    font-size: 18px;
+    font-family: 隶书;
+    color: #443935;
+}
+#act_end a{
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: 华文行楷;
+    color: #fdbdd8;
+}
+#label_end{
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: #b9c0c2;
+}
+
+#label_end p{
+    padding-top: 18px;
+    color: #0aa6d6;
+    font-family: 华文隶书;
+    font-size: 20px;
+    text-align: center;
+}

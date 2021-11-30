@@ -1,0 +1,360 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #9efbff;
+}
+
+#infors{
+	display: flex;
+	justify-content: space-between;
+	margin: 20px auto;
+	width: 1020px;
+	height: 100%;
+}
+
+#infors .navigation{
+	float: left;
+	width: 200px;
+	height: 500px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.navigation ul li{
+	padding: 31px;
+	height: 21px;
+	background-color: #c6e9f8;
+	list-style: none;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.navigation a{
+	font-family: "楷体";
+	font-size: 16px;
+	color: #0C0101;
+	text-decoration: none;
+}
+.navigation ul li:hover{
+	background-color: #f6e2fa;
+}
+#infors .personal{
+	float: left;
+	margin-left: 20px;
+	width: 800px;
+	height: 500px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.personal .heads{
+	width: 100%;
+	height: 60px;
+	background-color: #d4ddfd;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.heads h1{
+	text-align: center;
+	padding-top: 15px;
+	font-size: 16px;
+	font-family: "楷体";
+	color: #050505;
+}
+
+.personal .pocentes{
+	width: 100%;
+	height: 200px;
+	background-color: #f6ffff;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+}
+
+.personal .pocentes table{
+	border:0;
+	font-size: 15px;
+}
+
+.personal  input{
+	text-align: center;
+	border:0;
+	font-size: 15px;
+	color: #302e5f;
+	background: rgba(141, 138, 138, 0);
+	border-bottom: 2px solid#eacda950;
+}
+
+.personal .poends{
+	width: 100%;
+	height: 240px;
+	background-color: #dcf8f7;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.poends #act_end{
+    width: 100%;
+}
+
+#act_end span{
+    width: 100%;
+    font-size: 16px;
+    font-family: 隶书;
+    color: #443935;
+}
+#act_end a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 华文行楷;
+    color: #3d2d34;
+}
+
+.personal .myActivity{
+	width: 100%;
+	height: 440px;
+	background-color: #ebfbff;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.myActivity td:hover{
+	background-color: #f5e2fc;
+}
+
+.myActivity a{
+	font-size: 20px;
+	color: #0C0101;
+	font-family: "楷体";
+}
+
+.personal .myClub{
+	width: 100%;
+	height: 440px;
+	background-color: #e3f0f8;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.myClub .clubheads{
+	width: 90%;
+	margin: 0 auto;
+	height: 60px;
+
+}
+
+.clubheads h1{
+	text-align: center;
+	padding-top: 10px;
+	font-size: 30px;
+	color: #050505;
+	font-family: "黑体";
+}
+
+.myClub .clubInfo{
+	width: 90%;
+	margin:  0 auto;
+	height: 260px;
+
+}
+
+.clubInfo .infoLog{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 140px;
+}
+
+.infoLog .log{
+	float: left;
+	width: 20%;
+	height: 130px;
+}
+.log img{
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.infoLog .infos{
+	float: left;
+	width: 75%;
+	height: 140px;
+	background-color: #e9f2fd;
+}
+.infos p{
+	font-size: 18px;
+	color: #0782A8;
+	padding:15px;
+	text-indent: 2em;
+	line-height:20px;
+	color:#888;
+}
+
+.clubInfo .informsTo{
+	width: 100%;
+	height: 120px;
+}
+
+.myClub .clubinform{
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
+	height: 120px;
+}
+.clubinform .dates{
+	width: 49%;
+	height: 100%;
+	background-color: rgba(221, 252, 252, 0.99);
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+.dates li{
+	height: 30px;
+}
+.dates span{
+	float: right;
+}
+
+
+.personal .myEmail{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 440px;
+	background-color: #e3f0f8;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.myEmail .emailInfo{
+	margin-top: 15px;
+	width: 32%;
+	height: 425px;
+	background-color: #fdeaf2;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+.emailInfo li{
+	height: 30px;
+}
+.emailInfo span{
+	float: right;
+}
+
+
+.personal .activity{
+	width: 100%;
+	height: 440px;
+	background-color: #cbeafd;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.activity .activityInformHead{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height:220px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.activity .data{
+	margin-top: 10px;
+	width: 32%;
+	height: 210px;
+	background-color: #f5f3f4;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.activity .activityInformEnd{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height:220px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.activity li{
+	height: 35px;
+}
+.activity span{
+	float: right;
+}
+
+.personal .schedule{
+	width: 100%;
+	height: 440px;
+	background-color: #cbeafd;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+
+.schedule .scheduleInfo{
+	width: 100%;
+	height: 240px;
+}
+
+.scheduleInfo .scheduleHeads{
+	width: 100%;
+	height: 40px;
+	background-color: #3d3c3c;
+
+}
+
+.scheduleHeads h1{
+	padding-top: 5px;
+	font-size: 22px;
+	color: #c60d0d;
+	font-family: 华文行楷;
+	text-align: center;
+}
+.scheduleInfo .scheduleP{
+	width: 100%;
+	height: 200px;
+	background-color: #e7f7fc;
+}
+
+.scheduleP p{
+	padding: 10px;
+	font-family: 华文行楷;
+	font-size: 20px;
+	color: #0c0101;
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>社团申请</title>
+    <link th:href="@{/static/css/clubApply.css}" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="clubApply">
+        <table border="1px" cellspacing="0" cellpadding="0" width="100%" height="420px" align="center" >
+            <tr>
+                <th colspan="3" height="30px">社团报名表填写</th>
+            </tr>
+            <tr height="30px" align="center">
+                <td width="70px">分院:</td>
+                <td><input type="text" name="courtsName" th:value="${user.branchCourts}" placeholder="请输入分院名称"></td>
+            </tr>
+            <tr height="30px" align="center">
+                <td>专业:</td>
+                <td><input type="text" name="majorName"  th:value="${user.major}" placeholder="请输入专业名称"></td>
+            </tr>
+            <tr height="30px" align="center">
+                <td>班级:</td>
+                <td><input type="text" name="gradeName"  th:value="${user.classGrade}" placeholder="请输入班级"></td>
+            </tr>
+            <tr height="30px" align="center">
+                <td>学号:</td>
+                <td><input type="text" name="number"  th:value="${user.number}" placeholder="请输入学号"></td>
+            </tr>
+            <tr height="30px" align="center">
+                <td>姓名:</td>
+                <td><input type="text" name="userName"  th:value="${user.userName}" placeholder="请输入姓名"></td>
+            </tr>
+        </table>
+        <button type="button" onclick="succeed()">提交申请</button>
+        <a id="succeed" th:href="@{/clubIntroduce/clubIntroduce}"></a>
+        <script type="text/javascript" th:inline="javascript">
+            function succeed(event) {
+                alert("申请提交成功，请注意查看邮箱信息");
+                location.href=document.getElementById("succeed").href;
+            }
+            function returns() {
+                location.href=document.getElementById("succeed").href;
+            }
+        </script>
+
+        <button type="button" onclick="returns()">返回</button>
+    </div>
+</body>
+</html>

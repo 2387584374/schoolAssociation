@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>信息管理分院</title>
+    <link th:href="@{/static/css/infoManagement.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" th:href="@{/static/css/index.css}" type="text/css"/>
+</head>
+<body>
+        <div id="Man">
+            <div class="navigationFixed">
+            <div id="Man_head">
+                <div id="Man_head_long">
+                    <div class="logo"> <img th:src="@{/static/img/schoolBadge.jpg}"></div>
+                    <div class="logo-name">
+                        <span>贵州建设职业技术学院——信息管理学院</span>
+                    </div>
+                </div>
+            </div>
+            <div id="Man_head_navigation">
+                <ul>
+                    <li><a th:href="@{/}">首页</a></li>
+                    <li><a href="">学院简介</a></li>
+                    <li><a href="">学院活动</a></li>
+                    <li><a href="">学院社团</a></li>
+                    <li><a href="">学生会</a></li>
+                    <li><a th:href="@{/register/userLogin}">后台登录</a></li>
+                </ul>
+            </div>
+            </div>
+            <div id="Man_img"><img th:src="@{/static/img/info.jpg}"/></div>
+            <div id="Man_informs">
+                <div class="inform">
+                    信管时刻
+                    <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                </div>
+            </div>
+            <div id="Man_moment">
+                <div class="up">
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos1.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos2.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos3.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos4.jpg}"/></a></div>
+                </div>
+                <div class="center">
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos5.jpg}"/></a></div>
+                    <div class="dates1"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos6.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos7.jpg}"/></a></div>
+                </div>
+                <div class="below">
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos8.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos9.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos10.jpg}"/></a></div>
+                    <div class="dates"><a href="javaScript:void(0)"><img th:src="@{/static/img/infos11.jpg}"/></a></div>
+                </div>
+            </div>
+            <div id="Man_info">
+                    <div class="active">
+                            <div class="inform">
+                                信管通知
+                                <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                            </div>
+                            <ul>
+                                <li th:each="ActivityInform:${ActivityInform}"><a href="javaScript:void(0)" th:text="${ActivityInform.informName}"></a><span th:text="${ActivityInform.informTime}" ></span></li>
+                            </ul>
+                    </div>
+                    <div class="club">
+                        <div class="inform">
+                            信管社团
+                            <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                        </div>
+                        <ul>
+                            <li th:each="clubInform:${clubInform}"><a href="javaScript:void(0)" th:text="${clubInform.informName}"></a><span th:text="${clubInform.informTime}"></span></li>
+                        </ul>
+
+                    </div>
+                    <div class="union">
+                        <div class="inform">
+                            信管学生会
+                            <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                        </div>
+                        <ul>
+                            <li th:each="unionInform:${unionInform}"><a href="javaScript:void(0)" th:text="${unionInform.informName}"></a><span th:text="${unionInform.informTime}"></span></li>
+                        </ul>
+                    </div>
+            </div>
+            <div id="Man_end">
+                <p>贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+            </div>
+        </div>
+</body>
+</html>

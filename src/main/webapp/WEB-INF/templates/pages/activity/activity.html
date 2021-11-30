@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学院活动</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/activity.css}">
+    <script type="text/javascript" th:src="@{/static/js/vue.js}"></script>
+</head>
+<body>
+<div id="act_hd">
+    <img th:src="@{/static/img/schoolBadge.jpg}"/>
+    <span>贵州建设职业技术学院活动展示中心</span>
+</div><br/>
+<div id="act">
+    <div id="cat_info"><br/>
+        <ul style="list-style-type: none; display: inline;">
+            <li><a th:href="@{/}">首页</a></li>
+            <li><a href="#">学术类</a></li>
+            <li><a href="#">科技类</a></li>
+            <li><a href="#">文化类</a></li>
+            <li><a href="#">体育类</a></li>
+            <li><a href="#">创业类</a></li>
+        </ul>
+    </div>
+    <div id="act_new">
+        <div id="re">
+            <div id="log"><img th:src="@{/static/img/saydy.jpg}"></div>
+            <div id="activeName"><h1 th:text="${activeHome.activeName}"></h1></div>
+            <div id="tagline"><h2 th:text="${activeHome.activeTheme}"></h2></div>
+            <div id="tagline"><h4 th:text="${activeHome.activeDatails}"></h4></div>
+            <form method="post" id="activityApply" th:action="@{'/activityApply/verify/'+${activeHome.id}}"></form>
+            <div id="endbutton">
+                <button type="button" id="buttonApply" @click="activityVerify">点击报名</button>
+                <script type="text/javascript">
+                    let vue = new Vue({
+                        el:'#buttonApply',
+                        methods :{
+                            activityVerify:function (event) {
+
+                            let form =document.getElementById("activityApply");
+
+                            location.href=form.action;
+                            }
+                        }
+                    })
+                </script>
+                <button type="button">查看项目</button>
+                <button type="button">更多咨询</button>
+            </div>
+        </div>
+        <div id="rg"><img th:src="@{/static/img/skcbackground.jpg}"></div>
+    </div><hr/>
+    <div id="act_MoreActivities">
+        <span>热门赛事</span>
+        <a href="">更多 ></a>
+    </div>
+    <div id="act_recommend">
+        <div class="date"><a href=""><img th:src="@{/static/img/acti1.jpg}"></a></div>
+        <div class="date"><a href=""><img th:src="@{/static/img/acti2.jpg}"></a></div>
+        <div class="date"><a href=""><img th:src="@{/static/img/acti3.jpg}"></a></div>
+        <div class="date"><a href=""><img th:src="@{/static/img/cati4.png}"></a></div>
+    </div>
+    <div id="act_MoreActivities">
+        <span>更多活动</span>
+        <a href="">更多 ></a>
+    </div>
+    <div id="act_MoreActivitiesDate">
+        <div class="Mdata"><a href=""><img th:src="@{/static/img/club1.jpg}"/></a></div>
+        <div class="Mdata"><a href=""><img th:src="@{/static/img/club2.jpg}"/></a></div>
+        <div class="Mdata"><a href=""><img th:src="@{/static/img/club3.jpg}"/></a></div>
+    </div>
+    <div id="act_MoreActivities">
+        <span>最新消息</span>
+        <a href="">更多 ></a>
+    </div>
+    <div id="act_end" th:each="activeinfo:${activeInform}">
+        <span th:text="${activeinfo.informTime}"></span><br/>
+        <a href="" th:text="${activeinfo.informName}"></a><br/>
+    </div>
+</div>
+<div id="label_end">
+    <p>贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+</div>
+</body>
+</html>

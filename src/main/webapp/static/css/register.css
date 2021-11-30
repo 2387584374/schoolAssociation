@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-color: #e4f0fc;
+    height: 100%;
+}
+
+#reg{
+    margin: 100px auto;
+    background-color: #cfe5ee;
+    width: 600px;
+    height: 410px;
+}
+
+#reg table{
+    width: 90%;
+    height: 250px;
+}
+
+#reg .errMgs{
+    float: left;
+    margin: 0 auto;
+    color: red;
+    font-size: 10px;
+}
+
+#reg table{
+    margin: 35px auto;
+    width: 500px;
+    height: 200px;
+}
+
+#reg1{
+    background-color: #cfe5ee;
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+}
+#reg input{
+    border:0;
+    width: 65%;
+    font-size: 15px;
+    color: pink;
+    background: rgba(172, 136, 136, 0);
+    border-bottom: 2px solid rgba(19, 11, 1, 0.31);
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+#reg1 input{
+    border:0;
+    width: 65%;
+    font-size: 15px;
+    color: pink;
+    background: rgba(172, 136, 136, 0);
+    border-bottom: 2px solid rgba(19, 11, 1, 0.31);
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+#reg button{
+    margin-left: 7%;
+    margin-top: 8px;
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    background-image: linear-gradient(to top, #30324d 0%, #5f6298 100%);
+}
+#reg1 button{
+    margin-left: 28%;
+    margin-top: 2%;
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    background-image: linear-gradient(to top, #30324d 0%, #5f6298 100%);
+}
+
+#reg_to{
+    margin: 0 auto;
+    width: 62%;
+    height: 10%;
+}
+#reg_to h4{
+    margin: 0 auto;
+    font-family: 华文行楷;
+    font-size: 28px;
+    color: #ffffff;
+}
+#reg1_to{
+    margin-left: 34%;
+    width: 62%;
+    height: 10%;
+}
+#reg1_to h4{
+    margin: 0 auto;
+    font-family: 华文行楷;
+    font-size: 28px;
+    color: #444242;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>活动报名提交</title>
+    <link rel="stylesheet" th:href="@{/static/css/activityApply.css}" type="text/css"/>
+</head>
+<body>
+<div id="activityforms">
+    <div class="forms">
+        <form th:action="@{/activityApply/ApplySave}" method="post">
+            <input type="hidden" name="userId" th:value="${user.id}">
+            <input type="hidden" name="activityId" th:value="${activityId}">
+            <table border="1px" cellspacing="0" cellpadding="0" width="100%" height="420px" align="center" >
+                <tr>
+                    <th colspan="3" height="30px">活动报名表填写</th>
+                </tr>
+                <tr height="30px" align="center">
+                    <td width="70px">分院:</td>
+                    <td><input type="text" name="courtsName" th:value="${user.branchCourts}" placeholder="请输入分院名称"></td>
+                </tr>
+                <tr height="30px" align="center">
+                    <td>专业:</td>
+                    <td><input type="text" name="majorName" th:value="${user.major}" placeholder="请输入专业名称"></td>
+                </tr>
+                <tr height="30px" align="center">
+                    <td>班级:</td>
+                    <td><input type="text" name="gradeName" th:value="${user.classGrade}" placeholder="请输入班级"></td>
+                </tr>
+                <tr height="30px" align="center">
+                    <td>学号:</td>
+                    <td><input type="text" th:value="${user.number}" name="number" placeholder="请输入学号"></td>
+                </tr>
+                <tr height="30px" align="center">
+                    <td>姓名:</td>
+                    <td><input type="text" th:value="${user.userName}" name="userName" placeholder="请输入姓名"></td>
+                </tr>
+                <tr height="30px" align="center">
+                    <td>报名项目:</td>
+                    <td> <select name="projectName" style="background-color: #bfd5ea;border: none;resize: none;cursor: pointer;">
+                        <option id="projectName" value="网页设计" selected>网页设计</option>
+                        <option id="projectName" value="商品展示技术">商品展示技术</option>
+                        <option id="projectName" value="花艺（插花)">花艺（插花)</option>
+                        <option id="projectName" value="业财一体化">业财一体化</option>
+                        <option id="projectName" value="精细木工">精细木工</option>
+                        <option id="projectName" value="导游服务">导游服务</option>
+                        <option id="projectName" value="综合布线">综合布线</option>
+                        <option id="projectName" value="直授电商">直授电商</option>
+                        <option id="projectName" value="信号控制">信号控制</option>
+                        <option id="projectName" value="综合法律知识竞赛">综合法律知识竞赛</option>
+                        <option id="projectName" value="体育项目">体育项目</option>
+                        <option id="projectName" value="小视频设计">小视频设计</option>
+                        <option id="projectName" value="建筑智能化系统安装与调试">建筑智能化系统安装与调试</option>
+                        <option id="projectName" value="建筑设备安装与调控(给排水）">建筑设备安装与调控(给排水）</option>
+                        <option id="projectName" value="工程测量">工程测量</option>
+                        <option id="projectName" value="电子产品装调">电子产品装调</option>
+                        <option id="projectName" value="电气控制技术">电气控制技术</option>
+                        <option id="projectName" value="CAD绘图比赛">CAD绘图比赛</option>
+                        <option id="projectName" value="车工">车工</option>
+                        <option id="projectName" value="PLC编程技术赛项">PLC编程技术赛项</option>
+                        <option id="projectName" value="工程制图">工程制图</option>
+                        <option id="projectName" value="机械CAD">机械CAD</option>
+                        <option id="projectName" value="汽车故障诊断">汽车故障诊断</option>
+                    </select></td>
+                </tr>
+            </table>
+            <button type="submit">提交</button>
+            <button type="button" onclick="returnActivity()">返回</button>
+            <a id="returnActivity" th:href="@{/activity/activity}"></a>
+
+            <script type="text/javascript">
+                function returnActivity() {
+                    location.href=document.getElementById("returnActivity").href;
+                }
+
+            </script>
+        </form>
+    </div>
+</div>
+<div style="margin-top: 20px; text-align: center;width: 100%;height: 50px;background-color: #b9c0c2;">
+    <p style=" padding-top: 18px;color: #0aa6d6;font-family: 华文隶书;font-size: 20px;text-align: center;">贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+</div>
+</body>
+</html>

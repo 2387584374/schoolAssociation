@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>社团介绍</title>
+    <link rel="stylesheet" th:href="@{/static/css/club.css}" type="text/css">
+    <link th:href="@{/static/css/infoManagement.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="club">
+        <div class="navigationFixed">
+            <div id="club_long">
+                <img th:src="@{/static/img/schoolBadge.jpg}"/>
+                <input type="text" placeholder="输入你想了解的社团"><button type="button">搜索</button>
+                <span>贵州建设职业技术学院社团展示中心</span>
+            </div>
+            <div id="Man_head_navigation">
+                <ul>
+                    <li><a th:href="@{/}">首页</a></li>
+                    <li><a href="">社团简介</a></li>
+                    <li><a href="">社团活动</a></li>
+                    <li><a href="">申请社团</a></li>
+                    <li><a href="">查看所有社团</a></li>
+                    <li><a th:href="@{/register/userLogin}">后台登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="club_headImg">
+            <img th:src="@{/static/img/club1.jpg}" style="width: 12%;height: 120px;margin-left: 0.5%"/>
+            <img th:src="@{/static/img/club2.jpg}" style="width: 12%;height: 120px"/>
+            <img th:src="@{/static/img/club4.jpg}" style="width: 12%;height: 120px"/>
+            <img th:src="@{/static/img/club3.jpg}" style="width: 12%;height: 120px"/>
+            <img th:src="@{/static/img/club4.jpg}" style="width: 12%;height: 120px"/>
+            <img th:src="@{/static/img/club2.jpg}" style="width: 12%;height: 120px"/>
+            <img th:src="@{/static/img/club1.jpg}" style="width: 12%;height: 120px"/>
+            <img th:src="@{/static/img/club4.jpg}" style="width: 12%;height: 120px"/>
+
+            <img th:src="@{/static/img/club3.jpg}" style="width: 6%;height: 60px;margin-left: 2.2% "/>
+            <img th:src="@{/static/img/club1.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club2.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club4.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club4.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club3.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club1.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club3.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club1.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club2.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club2.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club4.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club1.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club2.jpg}" style="width: 6%;height: 60px "/>
+            <img th:src="@{/static/img/club3.jpg}" style="width: 6%;height: 60px "/>
+        </div>
+        <div id="club_middle">
+            <div id="club_le">
+               <h3>社团通知栏</h3>
+                <div class="new">
+                    <h4>社团招新</h4>
+                    <div class="date" th:each="clubInforms:${clubInforms}"><a href="" th:text="${clubInforms.activeName}"></a><hr/></div>
+                </div>
+                <div class="info">
+                    <h4>社团活动</h4>
+                    <div class="date" th:each="clubInformsEnroll:${clubInformsEnroll}"><a href="" th:text="${clubInformsEnroll.activeName}"></a><hr/></div>
+                </div>
+            </div>
+            <div id="club_re">
+                <div id="club_re_data" th:each="clubs:${clubs}"><br/>
+                    <div id="club_re_data_hp"><img th:src="@{${clubs.imgUrl}}"></div>
+                    <div id="club_re_data_bo">
+                        <span th:text="${clubs.clubName}"></span>
+                        <p th:text="${clubs.clubBrief}">
+                        </p>
+                        <div class="a">
+                            <a th:href="@{/activityApply/clubApply}">立即加入</a>
+                            <a href="">了解更多</a>
+                            <a href="">查看活动</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="club_end">
+        <h3>更多社团入口</h3>
+        <div class="eDate">
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+        </div>
+        <div class="eDate">
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+            <a href="">篮球社团</a>
+        </div>
+    </div>
+    <div id="label_end">
+        <p>贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+    </div>
+</body>
+</html>

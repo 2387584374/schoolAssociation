@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>建筑设备</title>
+    <link th:href="@{/static/css/architecturalEquipment.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/static/css/index.css}" type="text/css"/>
+</head>
+<body>
+    <div id="arcE">
+        <div class="navigationFixed">
+        <div id="arcE_head_long">
+            <div class="logo"><img th:src="@{/static/img/schoolBadge.jpg}"></div>
+            <div class="logo-name">贵州建设职业技术学院——建筑设备学院</div>
+        </div>
+        <div id="arcE_head_navigation">
+            <ul>
+                <li><a th:href="@{/}">首页</a></li>
+                <li><a href="">学院简介</a></li>
+                <li><a href="">学院活动</a></li>
+                <li><a href="">学院社团</a></li>
+                <li><a href="">学生会</a></li>
+                <li><a th:href="@{/register/userLogin}">后台登录</a></li>
+            </ul>
+        </div>
+        </div>
+        <div id="arcE_HomePhoto">
+            <img th:src="@{/static/img/arcEHomePhoto.jpg}"/>
+        </div>
+        <div id="arcE_inform">
+            <div class="inform">设备时刻
+            <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+            </div>
+        </div>
+        <div id="arcE_moment">
+            <div class="les">
+                <div class="ups">
+                    <div class="date">
+                        <div class="leDates"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE1.jpg}"></a></div>
+                        <div class="leDates1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE2.gif}"></a></div>
+                    </div>
+                    <div class="rgDate">
+                        <div class="rgDates"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE3.jpg}"></a></div>
+                        <div class="rgDates1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE4.jpg}"></a></div>
+                    </div>
+                </div>
+                <div class="ends"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE8.gif}"></a></div>
+            </div>
+            <div class="les">
+                <div class="ups1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE5.gif}"></a></div>
+                <div class="cents1">
+                    <div class="cenDate"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE6.gif}"></a></div>
+                    <div class="cenDate1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE7.jpg}"></a></div>
+                </div>
+                <div class="ends1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE9.gif}"></a></div>
+            </div>
+            <div class="cents">
+                <div class="hed1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE10.gif}"></a></div>
+                <div class="hed"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE11.gif}"></a></div>
+                <div class="hed"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE12.gif}"></a></div>
+            </div>
+            <div class="rgs">
+                <div class="upLs">
+                    <div class="upLsDate">
+                        <div class="update">
+                            <h1>建筑设备学院</h1>
+                        </div>
+                        <div class="update1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE13.gif}"></a></div>
+                    </div>
+                    <div class="upLsDate1">
+                        <div class="upDATE"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE14.gif}"></a></div>
+                        <div class="upDATE1"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE15.gif}"></a></div>
+                    </div>
+                </div>
+                <div class="endLs"><a href="javaScript:void(0)"><img th:src="@{/static/img/arcE16.gif}"></a></div>
+            </div>
+        </div>
+        <div id="arcE_info">
+            <div class="actives">
+                <div class="inform">
+                    设备活动
+                    <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                </div>
+                <ul>
+                    <li th:each="ActivityInform:${ActivityInform}"><a href="javaScript:void(0)" th:text="${ActivityInform.informName}"></a><span th:text="${ActivityInform.informTime}" ></span></li>
+                </ul>
+            </div>
+            <div class="clud">
+                <div class="inform">
+                    设备社团
+                    <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                </div>
+                <ul>
+                    <li th:each="clubInform:${clubInform}"><a href="javaScript:void(0)" th:text="${clubInform.informName}"></a><span th:text="${clubInform.informTime}"></span></li>
+                </ul>
+            </div>
+            <div class="union">
+                <div class="inform">
+                    设备学生会
+                    <a href="javaScript:void(0)" class="more"><img th:src="@{/static/img/more.gif}"/></a>
+                </div>
+                <ul>
+                    <li th:each="unionInform:${unionInform}"><a href="javaScript:void(0)" th:text="${unionInform.informName}"></a><span th:text="${unionInform.informTime}"></span></li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="arcE_end">
+            <p>贵州建设职业技术学院"第十六届技能文化艺术节网页设计参赛作品"</p>
+        </div>
+    </div>
+</body>
+</html>
